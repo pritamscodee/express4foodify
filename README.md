@@ -19,49 +19,12 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+===============================================FILE STRUCTURE ===========================================================================================
+                                   ============================================== 
+                                    ========================================
 
 
-
-
-FILE STRUCTURE :-
-src/
-│
-├── buyer/
-│
-├── db/
-│   ├── db.ts
-│   └── schema.ts
-│
-├── middleware/
-│   └── auth.ts
-│
-├── Seller/
-│   ├── controller.ts
-│   ├── routes.ts
-│   └── service.ts
-│
-├── utils/
-│
-├── validators/
-│   ├── schemas.ts
-│   └── index.ts
-│
-├── index.ts
-│
-├── .env
-├── .gitignore
-├── .prettierrc
-├── check_role_column.js
-├── drizzle.config.ts
-├── package-lock.json
-├── package.json
-├── render.yaml
-├── tsconfig.json
-└── update_cart_schema.js
-
-
-
-
+<img width="1023" height="1537" alt="image" src="https://github.com/user-attachments/assets/f4c619a0-5f00-4e51-8529-97512f72fbec" />
 
 
 
