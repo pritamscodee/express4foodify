@@ -9,7 +9,7 @@ async function updateCartSchema() {
   try {
     console.log('Updating Cart table schema...');
     
-    // Check if id column exists
+
     const idResult = await client`SELECT column_name FROM information_schema.columns WHERE table_name = 'cart' AND column_name = 'id'`;
     
     if (idResult.length === 0) {
@@ -20,7 +20,7 @@ async function updateCartSchema() {
       console.log('ID column already exists');
     }
     
-    // Check if userId column exists
+
     const userIdResult = await client`SELECT column_name FROM information_schema.columns WHERE table_name = 'cart' AND column_name = 'userId'`;
     
     if (userIdResult.length === 0) {
@@ -31,7 +31,7 @@ async function updateCartSchema() {
       console.log('UserId column already exists');
     }
     
-    // Show final schema
+
     const finalSchema = await client`SELECT column_name, data_type FROM information_schema.columns WHERE table_name = 'cart' ORDER BY ordinal_position`;
     console.log('Final Cart table schema:', finalSchema);
     

@@ -27,7 +27,7 @@ export async function insertInto_Cart(id: number, userId: number) {
     .values({
       userId: userId,
       productId: id,
-      quantity: 1,
+     
     })
     .returning();
 
