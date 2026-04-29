@@ -1,6 +1,6 @@
 import { eq, and } from 'drizzle-orm';
-import { db } from '../db/db';
-import { Cart, products } from '../db/schema';
+import { db } from '../db/db.js';
+import { Cart, products } from '../db/schema.js';
 
 export async function get_productsFromDb() {
   return await db.select().from(products);

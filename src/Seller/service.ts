@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
-import { db } from '../db/db';
-import { products } from '../db/schema';
+import { db } from '../db/db.js';
+import { products } from '../db/schema.js';
 import { eq } from 'drizzle-orm';
 
 interface NewProducts {

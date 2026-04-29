@@ -5,9 +5,9 @@ import {
   GetAllCarts,
   insertInto_Cart,
   Delete_Cart,
-} from './service';
-import { AuthenticatedRequest } from '../middleware/auth';
-import { idParamSchema } from '../validators/schemas';
+} from './service.js';
+import { AuthenticatedRequest } from '../middleware/auth.js';
+import { idParamSchema } from '../validators/schemas.js';
 import { z } from 'zod';
 
 export async function getall_productstobuyer(req: Request, res: Response) {

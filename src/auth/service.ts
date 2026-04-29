@@ -1,8 +1,8 @@
 import { eq } from 'drizzle-orm';
-import { db } from '../db/db';
-import { users } from '../db/schema';
-import { hashPassword, comparePassword } from '../utils/password';
-import { generateToken } from '../utils/jwt';
+import { db } from '../db/db.js';
+import { users } from '../db/schema.js';
+import { hashPassword, comparePassword } from '../utils/password.js';
+import { generateToken } from '../utils/jwt.js';
 
 export interface RegisterData {
   name: string;

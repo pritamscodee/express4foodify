@@ -5,12 +5,12 @@ import {
   get_productsFromDb,
   GetBy_idFrom_DB,
   update_ProductsINDb,
-} from './service';
+} from './service.js';
 import {
   idParamSchema,
   createProductSchema,
   updateProductSchema,
-} from '../validators/schemas';
+} from '../validators/schemas.js';
 import { z } from 'zod';
 
 export async function getReq(req: Request, res: Response) {

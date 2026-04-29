@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
-import { registerUser, loginUser } from './service';
-import { userSchema, loginSchema } from '../validators/schemas';
+import { registerUser, loginUser } from './service.js';
+import { userSchema, loginSchema } from '../validators/schemas.js';
 
 export async function register(req: Request, res: Response) {
   try {
