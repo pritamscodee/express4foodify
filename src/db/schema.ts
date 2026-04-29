@@ -29,6 +29,7 @@ export const products = pgTable('products', {
 export const Cart = pgTable('cart', {
   id: serial('id').primaryKey(),
   userId: integer('user_id').notNull(),
+   imageUrl: varchar('image_url', { length: 500 }).notNull(),
   productId: integer('product_id').notNull(),
   quantity: integer('quantity').notNull().default(1),
   createdAt: timestamp('created_at').defaultNow(),

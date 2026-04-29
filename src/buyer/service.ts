@@ -28,6 +28,7 @@ export async function insertInto_Cart(id: number, userId: number) {
       userId: userId,
       productId: id,
       quantity: 1,
+      imageUrl: product.imageUrl
     })
     .returning();
 
