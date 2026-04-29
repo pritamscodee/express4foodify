@@ -46,24 +46,17 @@ export async function getProductsbyid(req: Request, res: Response) {
 }
 
 export async function createCartReq(req: AuthenticatedRequest, res: Response) {
-  let id: number;
+  const id = Number(req.params.id);
 
-  try {
-    const validatedParams = idParamSchema.parse(req.params);
-    id = validatedParams.id;
-  } catch (error) {
-    if (error instanceof z.ZodError) {
-      return res.status(400).json({
-        error: 'Invalid product id',
-        details: error.issues,
-      });
-    }
-    return res.status(400).json({ error: 'Invalid request parameters' });
+  if (isNaN(id) || id <= 0) {
+    return res.status(400).json({
+      error: "Invalid product id",
+    });
   }
 
   if (!req.user) {
     return res.status(401).json({
-      error: 'User not authenticated',
+      error: "User not authenticated",
     });
   }
 
@@ -71,14 +64,14 @@ export async function createCartReq(req: AuthenticatedRequest, res: Response) {
     const cartInsert = await insertInto_Cart(id, req.user.userId);
 
     res.json({
-      message: 'Successfully added to cart',
+      message: "Successfully added to cart",
       data: cartInsert,
     });
   } catch (error) {
     if (error instanceof Error) {
       return res.status(400).json({ error: error.message });
     }
-    res.status(500).json({ error: 'Failed to add to cart' });
+    res.status(500).json({ error: "Failed to add to cart" });
   }
 }
 
