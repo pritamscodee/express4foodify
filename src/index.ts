@@ -12,7 +12,7 @@ app.use(urlencoded({ extended: true }));
 app.use(
   cors({
     origin: process.env.NODE_ENV === 'production' 
-      ? ['https://tangerine-paprenjak-1b22ec.netlify.app'] 
+      ? ['https://aesthetic-lokum-1ff627.netlify.app'] 
       : ['http://localhost:5173'],
     credentials: true,
   })
