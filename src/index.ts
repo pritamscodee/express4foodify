@@ -12,7 +12,7 @@ app.use(urlencoded({ extended: true }));
 app.use(
   cors({
     origin: process.env.NODE_ENV === 'production' 
-      ? ['https://your-frontend-url.netlify.app'] 
+      ? ['https://foodify2-0-tagf.vercel.app'] 
       : ['http://localhost:5173'],
     credentials: true,
   })
